@@ -10,7 +10,7 @@ enum Size {
   medium,
 }
 
-class RoundedIconComponent extends StatelessWidget {
+class RoundedIconWidget extends StatelessWidget {
   final Color color;
   final Widget icon;
   final Type type;
@@ -19,7 +19,7 @@ class RoundedIconComponent extends StatelessWidget {
   double containerSize = 0.0;
   double iconSize = 0.0;
 
-  RoundedIconComponent({
+  RoundedIconWidget({
     Key? key,
     required this.icon,
     required this.color,

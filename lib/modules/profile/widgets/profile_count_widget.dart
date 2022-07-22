@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class ProfileCountComponent extends StatelessWidget {
+class ProfileCountWidget extends StatelessWidget {
   final num count;
   final String title;
 
-  const ProfileCountComponent({
+  const ProfileCountWidget({
     Key? key,
     required this.count,
     required this.title,
@@ -15,10 +16,10 @@ class ProfileCountComponent extends StatelessWidget {
     return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
+        children: [
           Text(
             count.toString(),
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               fontWeight: FontWeight.bold,
               fontSize: 22,
               color: Colors.blue,
