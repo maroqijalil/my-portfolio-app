@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../widgets/rounded_icon_widget.dart';
 import '../widgets/profile_count_widget.dart';
 
@@ -26,9 +27,9 @@ class _ProfileHeaderComponentState extends State<ProfileHeaderComponent> {
             SizedBox(height: 12),
             Text(
               "Maroqi Jalil",
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 fontSize: 26,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w700,
               ),
             ),
             Text(
