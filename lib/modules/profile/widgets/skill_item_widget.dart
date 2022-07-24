@@ -24,6 +24,13 @@ class SkillItemComponent extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
         color: Colors.blue,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            offset: Offset(0, 2),
+            blurRadius: 8,
+          ),
+        ]
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portofolio/modules/profile/components/education_section_component.dart';
 import 'package:my_portofolio/modules/profile/components/links_section_component.dart';
 import 'package:my_portofolio/modules/profile/components/profile_header_component.dart';
 import 'package:my_portofolio/modules/profile/components/profile_info_component.dart';
@@ -39,6 +40,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ProfileHeaderComponent(),
                     SizedBox(height: 32),
                     ProfileInfoComponent(),
+                    SizedBox(height: 24),
+                    EducationSectionComponent(),
                     SizedBox(height: 24),
                     SkillSectionComponent(),
                     SizedBox(height: 18),
