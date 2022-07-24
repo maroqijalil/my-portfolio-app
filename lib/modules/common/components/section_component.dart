@@ -24,6 +24,7 @@ class SectionComponent extends StatelessWidget {
             style:
                 GoogleFonts.poppins(fontSize: 18, fontWeight: FontWeight.w700),
           ),
+          SizedBox(height: 6),
           child,
         ],
       ),

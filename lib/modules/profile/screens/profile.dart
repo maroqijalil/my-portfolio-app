@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_portofolio/modules/profile/components/profile_header_component.dart';
 import 'package:my_portofolio/modules/profile/components/profile_info_component.dart';
 import 'package:my_portofolio/modules/profile/components/skill_section_component.dart';
-import '../widgets/rounded_icon_widget.dart';
-import '../widgets/profile_count_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
