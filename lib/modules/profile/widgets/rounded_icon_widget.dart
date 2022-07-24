@@ -13,19 +13,19 @@ enum Size {
 class RoundedIconWidget extends StatelessWidget {
   final Color color;
   final Widget icon;
-  final Type type;
 
   void Function()? onPressed;
   double containerSize = 0.0;
   double iconSize = 0.0;
+  Type type;
 
   RoundedIconWidget({
     Key? key,
     required this.icon,
     required this.color,
-    required this.type,
-    Size size = Size.small,
     this.onPressed,
+    this.type = Type.filled,
+    Size size = Size.small,
   }) : super(key: key) {
     switch (size) {
       case Size.small:

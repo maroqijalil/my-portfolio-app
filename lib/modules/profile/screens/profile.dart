@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_portofolio/modules/profile/components/links_section_component.dart';
 import 'package:my_portofolio/modules/profile/components/profile_header_component.dart';
 import 'package:my_portofolio/modules/profile/components/profile_info_component.dart';
-import 'package:my_portofolio/modules/profile/components/skill_section_component.dart';
+import 'package:my_portofolio/modules/profile/components/skills_section_component.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -26,24 +27,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Column(
-                children: [
-                  ProfileHeaderComponent(),
-                  SizedBox(height: 32),
-                  ProfileInfoComponent(),
-                  SizedBox(height: 24),
-                  SkillSectionComponent()
-                ],
-              )
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Column(
+                  children: [
+                    ProfileHeaderComponent(),
+                    SizedBox(height: 32),
+                    ProfileInfoComponent(),
+                    SizedBox(height: 24),
+                    SkillSectionComponent(),
+                    SizedBox(height: 18),
+                    LinksSectionComponent(),
+                  ],
+                )
+              ],
+            ),
           ),
-        ),
+        )
       ),
     );
   }

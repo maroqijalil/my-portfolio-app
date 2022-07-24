@@ -11,10 +11,12 @@ class SkillSectionComponent extends StatelessWidget {
       title: "Skills",
       child: Wrap(
         children: [
-          SkillItemComponent(title: "Android Development"),
-          SkillItemComponent(title: "Front End Development"),
-          SkillItemComponent(title: "Back End Development"),
-          SkillItemComponent(title: "Graphic Design"),
+          SkillItemComponent(title: "Kotlin-Android"),
+          SkillItemComponent(title: "C++/C"),
+          SkillItemComponent(title: "UI/UX"),
+          SkillItemComponent(title: "JavasSript/TypeScript"),
+          SkillItemComponent(title: "Laravel"),
+          SkillItemComponent(title: "ReactJS"),
         ],
       ),
     );
