@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/modules/common/components/section_component.dart';
-import 'package:my_portofolio/modules/profile/widgets/skill_item_widget.dart';
+import 'package:my_portofolio/modules/profile/presentation/widgets/skill_item_widget.dart';
 
 class SkillSectionComponent extends StatelessWidget {
   const SkillSectionComponent({Key? key}) : super(key: key);

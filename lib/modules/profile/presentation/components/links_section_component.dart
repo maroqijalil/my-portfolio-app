@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portofolio/modules/common/components/section_component.dart';
-import 'package:my_portofolio/modules/profile/widgets/skill_item_widget.dart';
+import 'package:my_portofolio/modules/profile/presentation/widgets/skill_item_widget.dart';
 
 import '../widgets/rounded_icon_widget.dart';
 

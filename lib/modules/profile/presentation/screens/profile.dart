@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_portofolio/modules/profile/components/education_section_component.dart';
-import 'package:my_portofolio/modules/profile/components/links_section_component.dart';
-import 'package:my_portofolio/modules/profile/components/profile_header_component.dart';
-import 'package:my_portofolio/modules/profile/components/profile_info_component.dart';
-import 'package:my_portofolio/modules/profile/components/skills_section_component.dart';
+import 'package:my_portofolio/modules/profile/presentation/components/competitions_section_component.dart';
+import 'package:my_portofolio/modules/profile/presentation/components/education_section_component.dart';
+import 'package:my_portofolio/modules/profile/presentation/components/links_section_component.dart';
+import 'package:my_portofolio/modules/profile/presentation/components/profile_header_component.dart';
+import 'package:my_portofolio/modules/profile/presentation/components/profile_info_component.dart';
+import 'package:my_portofolio/modules/profile/presentation/components/skills_section_component.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -42,6 +43,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ProfileInfoComponent(),
                     SizedBox(height: 24),
                     EducationSectionComponent(),
+                    SizedBox(height: 24),
+                    CompetitionsSectionComponent(),
                     SizedBox(height: 24),
                     SkillSectionComponent(),
                     SizedBox(height: 18),
