@@ -16,7 +16,8 @@ class HorizontalImageItemComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-    double widgetWidth = (screenSize.width < 400) ? 100 : (screenSize.width / 400) * 100;
+    double widgetWidth =
+        (screenSize.width < 400) ? 100 : (screenSize.width / 400).floor() * 100;
 
     return Container(
       width: widgetWidth,

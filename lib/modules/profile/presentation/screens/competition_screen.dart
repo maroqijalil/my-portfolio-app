@@ -12,6 +12,9 @@ class CompetitionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+    int gridCount = (screenSize.width < 400) ? 2 : (screenSize.width / 200).floor().toInt();
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -43,11 +46,11 @@ class CompetitionScreen extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.only(top: 0, right: 2, left: 2, bottom: 2),
                 child: GridView.count(
-                  crossAxisCount: 2,
+                  crossAxisCount: gridCount,
                   children:
                       competition.imageSources.asMap().entries.map((image) {
                     return Padding(
-                      padding: (image.key >= 2)
+                      padding: (image.key >= gridCount)
                           ? EdgeInsets.all(2)
                           : EdgeInsets.only(
                               top: 8,
