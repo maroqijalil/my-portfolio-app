@@ -20,40 +20,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Jalil",
-          style: TextStyle(
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.all(16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Column(
-                  children: [
-                    ProfileHeaderComponent(),
-                    SizedBox(height: 32),
-                    ProfileInfoComponent(),
-                    SizedBox(height: 24),
-                    EducationSectionComponent(),
-                    SizedBox(height: 24),
-                    CompetitionsSectionComponent(),
-                    SizedBox(height: 24),
-                    SkillSectionComponent(),
-                    SizedBox(height: 18),
-                    LinksSectionComponent(),
-                  ],
-                )
+                ProfileHeaderComponent(),
+                Padding(
+                  padding: EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      ProfileInfoComponent(),
+                      SizedBox(height: 24),
+                      EducationSectionComponent(),
+                      SizedBox(height: 24),
+                      CompetitionsSectionComponent(),
+                      SizedBox(height: 24),
+                      SkillSectionComponent(),
+                      SizedBox(height: 18),
+                      LinksSectionComponent(),
+                    ],
+                  ),
+                ),
               ],
             ),
-          ),
         ),
       ),
     );
