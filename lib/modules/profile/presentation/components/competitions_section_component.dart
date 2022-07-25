@@ -84,10 +84,12 @@ class CompetitionsSectionComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+
     return SectionComponent(
       title: "Competitions",
       child: Container(
-        height: 100,
+        height: (screenSize.width < 400) ? 100 : (screenSize.width / 400) * 100,
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: competitions.map((competition) {

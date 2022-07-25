@@ -50,7 +50,7 @@ class _ProfileInfoComponentState extends State<ProfileInfoComponent> {
             RoundedIconWidget(
               icon: Icon(Icons.whatsapp, color: Colors.green),
               color: Colors.black26,
-              type: Type.outlined,
+              type: RoundedIconType.outlined,
             ),
             SizedBox(width: 18),
             RoundedIconWidget(
@@ -59,7 +59,7 @@ class _ProfileInfoComponentState extends State<ProfileInfoComponent> {
                 color: Colors.deepOrangeAccent,
               ),
               color: Colors.black26,
-              type: Type.outlined,
+              type: RoundedIconType.outlined,
             ),
           ],
         ),

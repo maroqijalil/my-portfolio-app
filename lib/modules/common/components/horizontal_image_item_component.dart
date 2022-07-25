@@ -15,42 +15,48 @@ class HorizontalImageItemComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(width: 100, child: Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            flex: 1,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: Image.asset(
-                imageSource,
-                width: 100,
-                fit: BoxFit.fitHeight,
+    Size screenSize = MediaQuery.of(context).size;
+    double widgetWidth = (screenSize.width < 400) ? 100 : (screenSize.width / 400) * 100;
+
+    return Container(
+      width: widgetWidth,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              flex: 1,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.asset(
+                  imageSource,
+                  width: widgetWidth,
+                  fit: BoxFit.fitHeight,
+                ),
               ),
             ),
-          ),
-          Expanded(
-            flex: 0,
-            child: Text(
-              title,
-              style: GoogleFonts.poppins(
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
+            Expanded(
+              flex: 0,
+              child: Text(
+                title,
+                style: GoogleFonts.poppins(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                ),
+                overflow: TextOverflow.ellipsis,
               ),
-              overflow: TextOverflow.ellipsis,
             ),
-          ),
-          Expanded(
-            flex: 0,
-            child: Text(
-              desc,
-              style: TextStyle(fontSize: 10),
+            Expanded(
+              flex: 0,
+              child: Text(
+                desc,
+                style: TextStyle(fontSize: 10),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
-    ),);
+    );
   }
 }

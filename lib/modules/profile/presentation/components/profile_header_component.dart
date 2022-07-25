@@ -82,8 +82,8 @@ class _ProfileHeaderComponentState extends State<ProfileHeaderComponent> {
                         ? Icon(Icons.favorite_outlined)
                         : Icon(Icons.favorite_border),
                     color: Colors.black12,
-                    type: Type.filled,
-                    size: Size.medium,
+                    type: RoundedIconType.filled,
+                    size: RoundedIconSize.medium,
                     onPressed: () {
                       setState(() {
                         favoriteState = !favoriteState;

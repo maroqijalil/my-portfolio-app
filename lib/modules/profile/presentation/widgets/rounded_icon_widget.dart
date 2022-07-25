@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-enum Type {
+enum RoundedIconType {
   filled,
   outlined,
 }
 
-enum Size {
+enum RoundedIconSize {
   small,
   medium,
 }
@@ -17,18 +17,18 @@ class RoundedIconWidget extends StatelessWidget {
   void Function()? onPressed;
   double containerSize = 0.0;
   double iconSize = 0.0;
-  Type type;
+  RoundedIconType type;
 
   RoundedIconWidget({
     Key? key,
     required this.icon,
     required this.color,
     this.onPressed,
-    this.type = Type.filled,
-    Size size = Size.small,
+    this.type = RoundedIconType.filled,
+    RoundedIconSize size = RoundedIconSize.small,
   }) : super(key: key) {
     switch (size) {
-      case Size.small:
+      case RoundedIconSize.small:
         {
           this.containerSize = 42.0;
           this.iconSize = 18.0;
@@ -36,7 +36,7 @@ class RoundedIconWidget extends StatelessWidget {
           break;
         }
 
-      case Size.medium:
+      case RoundedIconSize.medium:
         {
           this.containerSize = 72.0;
           this.iconSize = 34.0;
@@ -48,7 +48,7 @@ class RoundedIconWidget extends StatelessWidget {
 
   Decoration getDecoration() {
     switch (type) {
-      case Type.filled:
+      case RoundedIconType.filled:
         {
           return BoxDecoration(
             shape: BoxShape.circle,
@@ -56,7 +56,7 @@ class RoundedIconWidget extends StatelessWidget {
           );
         }
 
-      case Type.outlined:
+      case RoundedIconType.outlined:
         {
           return BoxDecoration(
             shape: BoxShape.circle,
